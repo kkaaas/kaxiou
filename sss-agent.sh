@@ -80,7 +80,7 @@ install_agent() {
     chmod 777 -R $SSS_AGENT_PATH
 
     echo -e "正在下载监控端"
-    wget --no-check-certificate -qO client-linux.py https://raw.githubusercontent.com/kkaaas/kaxiou/master/client-linux.py
+    wget --no-check-certificate -qO client-linux.py https://ghproxy.com/https://raw.githubusercontent.com/kkaaas/kaxiou/master/client-linux.py
     mv client-linux.py $SSS_AGENT_PATH
 
     modify_agent_config "$@"
