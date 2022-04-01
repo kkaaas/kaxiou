@@ -19,9 +19,9 @@ INTERVAL = 1
 PROBEPORT = 80
 PROBE_PROTOCOL_PREFER = "ipv4"  # ipv4, ipv6
 PING_PACKET_HISTORY_LEN = 100
-CU = "110.242.21.33"
-CT = "61.147.112.198"
-CM = "120.232.191.141"
+CU = "cu.zhizhanggongdao.top"
+CT = "ct.zhizhanggongdao.top"
+CM = "cm.zhizhanggongdao.top"
 
 import socket
 import time
