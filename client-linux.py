@@ -102,20 +102,7 @@ def liuliang():
                     NET_OUT += int(netinfo[0][9])
     return NET_IN, NET_OUT
 
-def tupd():
-    '''
-    tcp, udp, process, thread count: for view ddcc attack , then send warning
-    :return:
-    '''
-    s = subprocess.check_output("ss -t|wc -l", shell=True)
-    t = int(s[:-1])-1
-    s = subprocess.check_output("ss -u|wc -l", shell=True)
-    u = int(s[:-1])-1
-    s = subprocess.check_output("ps -ef|wc -l", shell=True)
-    p = int(s[:-1])-2
-    s = subprocess.check_output("ps -eLf|wc -l", shell=True)
-    d = int(s[:-1])-2
-    return t,u,p,d
+
 
 def get_network(ip_version):
     if(ip_version == 4):
@@ -408,7 +395,7 @@ if __name__ == '__main__':
                 array['time_10010'] = pingTime.get('10010')
                 array['time_189'] = pingTime.get('189')
                 array['time_10086'] = pingTime.get('10086')
-                array['tcp'], array['udp'], array['process'], array['thread'] = tupd()
+              
                 array['io_read'] = diskIO.get("read")
                 array['io_write'] = diskIO.get("write")
 
