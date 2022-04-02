@@ -395,7 +395,6 @@ if __name__ == '__main__':
                 array['time_10010'] = pingTime.get('10010')
                 array['time_189'] = pingTime.get('189')
                 array['time_10086'] = pingTime.get('10086')
-                array['tcp'], array['udp'], array['process'], array['thread'] = tupd()
                 array['io_read'] = diskIO.get("read")
                 array['io_write'] = diskIO.get("write")
 
