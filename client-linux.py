@@ -11,9 +11,9 @@ USER = "s01"
 
 PASSWORD = "USER_DEFAULT_PASSWORD"
 PORT = 35601
-CU = "cu.zhizhanggongdao.top"
-CT = "ct.zhizhanggongdao.top"
-CM = "cm.zhizhanggongdao.top"
+CU = "cu.tz.cloudcpp.com"
+CT = "ct.tz.cloudcpp.com"
+CM = "cm.tz.cloudcpp.com"
 PROBEPORT = 80
 PROBE_PROTOCOL_PREFER = "ipv4"  # ipv4, ipv6
 PING_PACKET_HISTORY_LEN = 100
@@ -107,7 +107,6 @@ def tupd():
     tcp, udp, process, thread count: for view ddcc attack , then send warning
     :return:
     '''
-return 0,0,0,0
     s = subprocess.check_output("ss -t|wc -l", shell=True)
     t = int(s[:-1])-1
     s = subprocess.check_output("ss -u|wc -l", shell=True)
