@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # coding: utf-8
-# Update by : https://github.com/cppla/ServerStatus, Update date: 20220323
-# 版本：1.0.3, 支持Python版本：2.7 to 3.9
+# Update by : https://github.com/cppla/ServerStatus, Update date: 20220530
+# 版本：1.0.3, 支持Python版本：2.7 to 3.10
 # 支持操作系统： Linux, OSX, FreeBSD, OpenBSD and NetBSD, both 32-bit and 64-bit architectures
 # 说明: 默认情况下修改server和user就可以了。丢包率监测方向可以自定义，例如：CU = "www.facebook.com"。
 
@@ -101,8 +101,6 @@ def liuliang():
                     NET_IN += int(netinfo[0][1])
                     NET_OUT += int(netinfo[0][9])
     return NET_IN, NET_OUT
-
-
 
 def get_network(ip_version):
     if(ip_version == 4):
@@ -297,7 +295,7 @@ def get_realtime_data():
         target=_disk_io,
     )
     for ti in [t1, t2, t3, t4, t5]:
-        ti.setDaemon(True)
+        ti.daemon = True
         ti.start()
 
 def byte_str(object):
@@ -395,7 +393,7 @@ if __name__ == '__main__':
                 array['time_10010'] = pingTime.get('10010')
                 array['time_189'] = pingTime.get('189')
                 array['time_10086'] = pingTime.get('10086')
-              
+   
                 array['io_read'] = diskIO.get("read")
                 array['io_write'] = diskIO.get("write")
 
